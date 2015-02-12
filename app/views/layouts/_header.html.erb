@@ -4,7 +4,13 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Help", help_path %></li>
-            <li><%= link_to "Log in", '#' %></li>
+            <li><% if user_signed_in? %>
+  <p>Welcome <%= current_user.email %>
+  <%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %>
+<% else %>
+  You are not signed in.</p>
+  <%= link_to 'Login', new_user_session_path %>
+<% end %></li>
           </ul>
         </nav>
       </div>
