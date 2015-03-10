@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :questions
+
   get 'about' => 'static_pages#about'
 
   get 'help'  => 'static_pages#help'
