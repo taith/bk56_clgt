@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :questions
+  #resources :answers
+
+  # resources :answers
+
+  resources :questions do
+    resources :answers
+  end
 
   get 'about' => 'static_pages#about'
 

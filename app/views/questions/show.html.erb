@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<strong>Question</strong>
 <table>
   <tbody>
     <tr>
@@ -13,10 +13,13 @@
       <td><%= @question.id %></td>
       <td><%= @question.title %></td>
       <td><%= @question.content %></td>
+      <td><%= link_to 'Show Answer', question_answers_path(@question) %></td>
+      <td><%= link_to 'New Answer', new_question_answer_path(@question) %></td>
       <td><%= link_to 'Edit', edit_question_path(@question) %></td>
       <td><%= link_to 'Destroy', @question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   </tbody>
 </table>
+
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>

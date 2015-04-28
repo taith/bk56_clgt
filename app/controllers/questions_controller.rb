@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    if current_user==nil then redirect_to '/users/sign_in'; return end
+    if current_user==nil then redirect_to '/users/sign_in';  return end
     #@question = Question.find(params[:id])
   end
 
@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    if current_user==nil then redirect_to '/users/sign_in'; return end
+    if current_user==nil then redirect_to '/users/sign_in';  return end
       if current_user.id!=@question.user_id then redirect_to '/questions/'; return end
     @question.destroy
     respond_with(@question)
