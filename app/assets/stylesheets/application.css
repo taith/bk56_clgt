@@ -19,6 +19,11 @@
 @import "bootstrap";
 
 /* header */
+div#logo {
+  height: 53px;
+  width: 143px;
+  float: left;
+}
 header.navbar.navbar-fixed-top.navbar-inverse {
   background-color: #3b5998;
 }
@@ -28,6 +33,13 @@ header.navbar.navbar-fixed-top.navbar-inverse {
 ul.nav.navbar-nav.navbar-right a {
   text-decoration: none;
   color: #fff;
+  line-height: 23px;
+}
+ul.nav.navbar-nav.navbar-right a:hover {
+  background-color: #032264;
+}
+span#not-login {
+  line-height: 53px;
 }
 /* header */
 

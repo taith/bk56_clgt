@@ -1,5 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
+        <div id="logo"><img alt="Rails logo" src="/assets/logo.png" /></div>
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
@@ -9,7 +10,7 @@
               Welcome <%= current_user.email %></li>
             <li><%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %></li>
       <% else %>
-            <li><a href="#">You are not signed in.</a></li>
+            <li><span id="not-login">You are not signed in!</span></li>
             <li><%= link_to 'Login', new_user_session_path %></li>
       <% end %>
           </ul>
