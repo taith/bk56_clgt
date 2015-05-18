@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  host: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  # username: myapp
+  # password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>

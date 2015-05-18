@@ -6,12 +6,12 @@
             <li><%= link_to "Help", help_path %></li>
             <li><%= link_to "Question", questions_path %></li>
             <li><% if user_signed_in? %>
-  <p>Welcome <%= current_user.email %>
-  <%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %>
-<% else %>
-  You are not signed in.</p>
-  <%= link_to 'Login', new_user_session_path %>
-<% end %></li>
+              Welcome <%= current_user.email %></li>
+            <li><%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+            <li><a href="#">You are not signed in.</a></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+      <% end %>
           </ul>
         </nav>
       </div>
